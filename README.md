@@ -1,6 +1,6 @@
-# Team Sumit AI WhatsApp Agent 🤖
+# AI WhatsApp Agent 🤖
 
-An autonomous AI Agent that manages WhatsApp messages for Sumit Sir — classifies incoming messages, auto-replies to routine queries, and alerts Sumit Sir only for urgent/important messages.
+An autonomous AI Agent that manages WhatsApp messages — classifies incoming messages, auto-replies to routine queries, and alerts only for urgent/important messages.
 
 ## What It Does
 
@@ -8,7 +8,7 @@ An autonomous AI Agent that manages WhatsApp messages for Sumit Sir — classifi
 - Uses Groq AI (llama-3.1-8b) to classify messages
 - Auto-replies to internship, bootcamp, and seminar queries
 - Silently ignores spam
-- Alerts Sumit Sir on WhatsApp for urgent/unknown messages
+- Alerts on WhatsApp for urgent/unknown messages
 - Logs everything to Google Sheets
 - Auto-generates monthly PDF report and uploads to Google Drive
 
@@ -29,7 +29,7 @@ INTERNSHIP / BOOTCAMP / SEMINAR → Auto reply
 
 SPAM → Ignored
 
-IMPORTANT / UNKNOWN → Alert to Sumit Sir
+IMPORTANT / UNKNOWN → Alert
 
 ↓
 
@@ -130,8 +130,8 @@ Scan the QR code with WhatsApp → Agent is live!
 | BOOTCAMP_QUERY | Auto reply with bootcamp details |
 | SEMINAR_BOOKING | Auto reply asking for event details |
 | SPAM | Silently ignored |
-| IMPORTANT | Alert sent to Sumit Sir |
-| UNKNOWN | Alert sent to Sumit Sir |
+| IMPORTANT | Alert sent to  |
+| UNKNOWN | Alert sent to  |
 
 ## Monthly Reports
 
@@ -142,6 +142,4 @@ Every 1st of the month at midnight:
 
 To trigger manually: `GET http://localhost:8000/generate-report`
 
-## Built By
 
-Poorvika NP & Ganeshwar — Suprazo Technologies, June 2026
