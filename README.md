@@ -17,7 +17,7 @@ Someone messages WhatsApp
 
 ↓
 
-wa_client.js reads it
+wa_client.js reads it(we can use meta cloud API)
 
 ↓
 
