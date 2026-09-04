@@ -1,73 +1,3 @@
-# from responder import send_whatsapp_reply
-# from notifier import notify_sumit_sir
-# from logger import log_message
-
-# async def handle_decision(sender: str, message: str, category: str):
-#     """
-#     This is the decision engine.
-#     Based on category from classifier, it decides:
-#     - ROUTINE messages → auto reply
-#     - IMPORTANT/UNKNOWN → escalate to Sumit Sir
-#     """
-
-#     print(f"⚙️ Decision engine running for category: {category}")
-
-#     # ── Template replies for each routine category ────────
-#     replies = {
-#         "INTERNSHIP_QUERY": (
-#             "Hi! Thank you for reaching out to Sumit Sir. 🙏\n\n"
-#             "We are currently reviewing internship applications. "
-#             "Please fill out this form and we will get back to you shortly.\n"
-#             "Form link: [ADD YOUR FORM LINK HERE]\n\n"
-#             "For more updates follow us on Instagram and LinkedIn."
-#         ),
-#         "BOOTCAMP_QUERY": (
-#             "Hi! Thank you for your interest in our bootcamp! 🚀\n\n"
-#             "Here are the details:\n"
-#             "📅 Dates: [ADD DATES]\n"
-#             "💰 Fee: [ADD FEE]\n"
-#             "📍 Mode: [Online/Offline]\n\n"
-#             "Register here: [ADD REGISTRATION LINK]\n"
-#             "Feel free to ask if you have more questions!"
-#         ),
-#         "SEMINAR_BOOKING": (
-#             "Hi! Thank you for inviting Sumit Sir. 🎤\n\n"
-#             "Please share the following details so we can check availability:\n"
-#             "1. Event name and date\n"
-#             "2. Venue / Online platform\n"
-#             "3. Topic you want covered\n"
-#             "4. Expected audience size\n\n"
-#             "We will get back to you shortly!"
-#         ),
-#         "SPAM": None  # No reply for spam, just ignore
-#     }
-
-#     # ── Decision Logic ──────────
-#     if category == "IMPORTANT" or category == "UNKNOWN":
-#         # Escalate to Sumit Sir immediately
-#         print(f"🚨 Escalating to Sumit Sir — category: {category}")
-#         await notify_sumit_sir(sender=sender, message=message, category=category)
-
-#     elif category == "SPAM":
-        
-#         print(f"🗑️ Spam detected, ignoring message from {sender}")
-
-#     else:
-    
-#         reply_text = replies.get(category)
-#         if reply_text:
-#             print(f"💬 Sending auto reply for {category}")
-#             await send_whatsapp_reply(to=sender, message=reply_text)
-
-    
-#     await log_message(
-#         sender=sender,
-#         message=message,
-#         category=category
-#     )
-    
-
-
 from logger import log_message
 
 # ── Template replies for each category ───────────────────
@@ -111,7 +41,7 @@ async def get_reply(category: str) -> str:
 
 async def handle_decision(sender: str, message: str, category: str):
     """
-    Decision engine — called from webhook.py
+    Decision engine — called from main.py
     Decides what to do based on category:
     - ROUTINE → returns reply text
     - IMPORTANT/UNKNOWN → escalates
