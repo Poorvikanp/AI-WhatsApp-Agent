@@ -6,7 +6,7 @@ An autonomous AI Agent that manages WhatsApp messages — classifies incoming me
 
 - Reads every incoming WhatsApp message in real time
 - Uses Groq AI (llama-3.1-8b) to classify messages
-- Auto-replies to internship, bootcamp, and seminar queries
+- Auto-replies to internship, bootcamp, One to one call and seminar queries
 - Silently ignores spam
 - Alerts on WhatsApp for urgent/unknown messages
 - Logs everything to Google Sheets
